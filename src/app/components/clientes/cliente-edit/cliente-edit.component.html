@@ -1,0 +1,46 @@
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="/">Lamk</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="/">Home</a></li>
+            <li><a class="nav-link scrollto " href="/clientes">Clientes</a></li>
+            <li><a class="nav-link scrollto" href="/cursos">Cursos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+<section id="counts" class="counts section-bg">
+    <div class="container">
+        <h2>Actualizar Cliente</h2>
+
+        <form>
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input [(ngModel)]="cliente.id" type="text" class="form-control" id="id" name="id" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombres</label>
+                <input [(ngModel)]="cliente.nombre" type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellidos</label>
+                <input [(ngModel)]="cliente.apellido" type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input [(ngModel)]="cliente.email" type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="updateCliente()">Actualizar</button>
+        </form>
+    </div>
+</section>

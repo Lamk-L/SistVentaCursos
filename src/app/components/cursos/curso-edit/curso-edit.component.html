@@ -1,0 +1,58 @@
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="/">Lamk</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="/">Home</a></li>
+            <li><a class="nav-link scrollto " href="/clientes">Clientes</a></li>
+            <li><a class="nav-link scrollto" href="/cursos">Cursos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+<section id="counts" class="counts section-bg">
+    <div class="container">
+        <h2>Actualizar Curso</h2>
+
+        <form>
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input [(ngModel)]="curso.id" type="text" class="form-control" id="id" name="id" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo</label>
+                <input [(ngModel)]="curso.titulo" type="text" class="form-control" id="titulo" name="titulo" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <input [(ngModel)]="curso.descripcion" type="text" class="form-control" id="descripcion" name="descripcion" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input [(ngModel)]="curso.precio" type="text" class="form-control" id="precio" name="precio" pattern="^[0-9]+(\.[0-9]+)?$">
+            </div>
+            <div class="mb-3">
+                <label for="duracion" class="form-label">Duración</label>
+                <input [(ngModel)]="curso.duracion" type="text" class="form-control" id="duracion" name="duracion" pattern="^\d+$">
+            </div>
+            <div class="mb-3">
+                <label for="nivel" class="form-label">Nivel</label>
+                <input [(ngModel)]="curso.nivel" type="text" class="form-control" id="nivel" name="nivel" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+">
+            </div>
+            <div class="mb-3">
+                <label for="vacantes" class="form-label">Vacantes</label>
+                <input [(ngModel)]="curso.vacantes" type="text" class="form-control" id="vacantes" name="vacantes" pattern="^\d+$">
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="updateCurso()">Actualizar</button>
+        </form>
+    </div>
+</section>
