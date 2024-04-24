@@ -35,7 +35,7 @@ export class CursoListComponent implements OnInit{
 
   deleteCurso(id : number) {
     this.cursoService.deleteCursoById(id).subscribe(
-      ()=> this.listCursos()
+      () => this.listCursos()
     );
   }
 }
